@@ -19,6 +19,7 @@
           rows="3"
           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
         />
+                <p v-if="errors.description" class="mt-1 text-sm text-red-600">{{ errors.description }}</p>
       </div>
 
       <div class="grid grid-cols-2 gap-4">
@@ -86,8 +87,9 @@ export default {
     handleSubmit() {
       this.errors = {}
 
-      if (!this.formData.title.trim()) this.errors.title = 'Title is required'
-      if (!this.formData.status) this.errors.status = 'Status is required'
+      if (!this.formData.title.trim()) this.errors.title = 'Your Ticket needs a title'
+      if (this.formData.description.length < 7) this.errors.description = 'Your Description should be atleast 7 chrarcters long'
+      if (!this.formData.status) this.errors.status = 'Your Ticket needs a status'
 
       if (Object.keys(this.errors).length > 0) return
 

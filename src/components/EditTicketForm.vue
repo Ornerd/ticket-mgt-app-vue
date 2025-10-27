@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-6 rounded-xl shadow-lg mb-6">
+  <div class="bg-white p-6 rounded-xl shadow-lg mb-6 fixed">
     <h3 class="text-xl font-semibold mb-4">Edit Ticket</h3>
     <form @submit.prevent="handleSubmit" class="space-y-4">
       <div>

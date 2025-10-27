@@ -53,7 +53,7 @@
           <div 
             v-for="ticket in reversedTickets" 
             :key="ticket.id" 
-            class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+            :class="`border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow ${ticket.status === 'open'? 'bg-green-200' : ticket.status === 'in_progress'? 'bg-amber-200' : 'bg-gray-200' }`"
           >
             <div class="flex justify-between items-start mb-2">
               <h3 class="text-lg font-semibold">{{ ticket.title }}</h3>
