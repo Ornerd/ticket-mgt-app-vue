@@ -71,8 +71,9 @@
     <div class="absolute top-1/4 right-1/4 w-20 h-20 bg-blue-400 rounded-full opacity-10 z-0"></div>
     <div class="absolute -top-15 -left-8 w-80 h-80 bg-blue-400 rounded-full opacity-10 z-0"></div>
 
-    <Footer/>
+    
   </div>
+  <Footer/>
 </template>
 
 <script>

@@ -6,22 +6,16 @@
     <div class="absolute bottom-40 left-1/4 w-16 h-16 bg-blue-300 rounded-full opacity-5 z-0"></div>
     <div class="absolute top-1/2 right-10 w-12 h-12 bg-blue-200 rounded-full opacity-10 z-0"></div>
     
-    <div class="max-w-6xl mx-auto relative z-10">
+    <main class="max-w-6xl mx-auto relative z-10">
       <!-- Header -->
-      <div class="flex justify-between items-center mb-8">
+      <header class="flex justify-between items-center mb-8">
         <div>
-          <h1 class="text-3xl font-bold text-gray-900 capitalize">
+          <h1 class="text-3xl font-bold text-gray-900 capitalize w-1/2 md:w-full">
             Hello {{ userName }}!
           </h1>
           <p class="text-gray-600 mt-1">Welcome to your dashboard</p>
         </div>
         <div class="space-x-4">
-          <router-link 
-            to="/tickets"
-            class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 inline-block"
-          >
-            Manage Tickets
-          </router-link>
           <button 
             @click="handleLogout"
             class="bg-red-950 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
@@ -29,20 +23,31 @@
             Logout ➡
           </button>
         </div>
-      </div>
+      </header>
 
       <!-- Stats Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div v-for="(stat, index) in statCards" :key="index" class="bg-white p-6 rounded-xl shadow-lg">
           <div :class="`w-12 h-12 ${stat.color} rounded-full flex items-center justify-center mb-4`">
             <span class="text-white font-bold text-lg">{{ stat.value }}</span>
           </div>
           <h3 class="text-lg font-semibold text-gray-900">{{ stat.label }}</h3>
         </div>
+      </section>
+
+      <!-- Manage tickets button -->
+      <div class="mb-8 flex items-center justify-end">
+          <router-link 
+            to="/tickets"
+            class="bg-blue-600 text-white px-4 py-2  rounded-lg hover:bg-blue-700 inline-block"
+          >
+            Manage Tickets
+          </router-link>
       </div>
+       
 
       <!-- Recent Activity -->
-      <div class="bg-white p-6 rounded-xl shadow-lg">
+      <section class="bg-white p-6 rounded-xl shadow-lg">
         <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
         <div class="space-y-3">
           <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
@@ -58,10 +63,10 @@
             <span class="text-sm text-gray-500">1 day ago</span>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Quick Actions -->
-      <div class="mt-8 bg-white p-6 rounded-xl shadow-lg">
+      <section class="mt-8 bg-white p-6 rounded-xl shadow-lg">
         <h2 class="text-xl font-semibold mb-4">Quick Actions</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <router-link 
@@ -83,10 +88,11 @@
             View In Progress
           </router-link>
         </div>
-      </div>
-    </div>
-    <Footer/>
+      </section>
+    </main>
+    
   </div>
+  <Footer/>
 </template>
 
 <script>
