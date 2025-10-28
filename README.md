@@ -1,38 +1,43 @@
-# ticket-mgt-app-vue
+# Ortel - Ticket Management System
 
-This template should help get you started developing with Vue 3 in Vite.
+A reactive ticket management system built with Vue.js 3 and Vue Router.
 
-## Recommended IDE Setup
+## Features
+- 🎯 **Landing Page** - Beautiful hero section with wave background
+- 🔐 **Authentication** - Login/Signup with form validation
+- 📊 **Dashboard** - Real-time ticket statistics and quick actions
+- 🎫 **Ticket Management** - Full CRUD operations (Create, Read, Update, Delete)
+- 🎨 **Responsive Design** - Works perfectly on all devices
+- 🔒 **Protected Routes** - Automatic redirect to login for unauthorized access
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Tech Stack
+- **Framework**: Vue.js 3 with Composition API
+- **Routing**: Vue Router 4
+- **Styling**: Tailwind CSS
+- **State Management**: Vue 3 Reactivity
+- **Font**: Poppins
 
-## Recommended Browser Setup
+### Prerequisites
+- Node.js 16+
+- npm or yarn
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/Ornerd/ticket-mgt-app-vue.git
+cd ticket-mgt-app-vue
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+# Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Run development server
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Demo Credentials
+Use these credentials to test the application upon login:
 
-```sh
-npm run build
-```
+- Email: test@test.com
+- Password: 1234567
+
+You can use any name and email for the signup page.
