@@ -1,4 +1,4 @@
-# Ortel - Ticket Management System (Vue.js
+# Ortel - Ticket Management System
 
 A reactive ticket management system built with Vue.js 3 and Vue Router.
 
